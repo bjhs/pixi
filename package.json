@@ -1,0 +1,51 @@
+{
+  "name": "pixi",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "dev:https": "vite --host --https",
+    "build": "vue-tsc -b && vite build",
+    "build:analyze": "vue-tsc -b && vite build --mode analyze",
+    "build:staging": "vue-tsc -b && vite build --mode staging",
+    "preview": "vite preview --host",
+    "preview:https": "vite preview --host --https",
+    "lint": "vue-tsc --noEmit",
+    "lint:fix": "vue-tsc --noEmit --skipLibCheck",
+    "type-check": "vue-tsc --noEmit --skipLibCheck",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "test:e2e": "echo 'E2E tests not configured yet'",
+    "clean": "rm -rf dist node_modules/.vite",
+    "clean:all": "rm -rf dist node_modules node_modules/.vite",
+    "postinstall": "echo 'Installation complete. Run npm run dev to start development server.'",
+    "ci": "npm run lint && npm run test:run && npm run build",
+    "serve": "npm run preview"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "pinia": "^3.0.3",
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1",
+    "vuetify": "^3.9.0-beta.1"
+  },
+  "devDependencies": {
+    "@pinia/testing": "^1.0.2",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/vue": "^8.1.0",
+    "@types/node": "^24.3.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.7.0",
+    "jsdom": "^26.1.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.2",
+    "vite-plugin-pwa": "^1.0.3",
+    "vite-plugin-vuetify": "^2.1.2",
+    "vitest": "^3.2.4",
+    "vue-tsc": "^3.0.5"
+  }
+}

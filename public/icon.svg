@@ -1,0 +1,11 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="64" fill="#1976D2"/>
+  <circle cx="256" cy="256" r="120" fill="white" opacity="0.2"/>
+  <circle cx="256" cy="256" r="80" fill="white" opacity="0.3"/>
+  <circle cx="256" cy="256" r="40" fill="white"/>
+  <path d="M200 200L312 200L312 312L200 312Z" stroke="white" stroke-width="8" fill="none" opacity="0.8"/>
+  <path d="M220 220L292 220" stroke="#1976D2" stroke-width="4" stroke-linecap="round"/>
+  <path d="M220 240L292 240" stroke="#1976D2" stroke-width="4" stroke-linecap="round"/>
+  <path d="M220 260L270 260" stroke="#1976D2" stroke-width="4" stroke-linecap="round"/>
+  <text x="256" y="380" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">Pixi</text>
+</svg>

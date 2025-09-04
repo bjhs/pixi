@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  # Frontend development server
+  frontend-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - VITE_API_BASE_URL=http://localhost:8000/api
+    command: npm run dev
+    profiles:
+      - dev
+
+  # Frontend production build
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+    profiles:
+      - production
+
+  # Future backend service placeholder
+  backend:
+    image: python:3.11-alpine
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+    working_dir: /app
+    command: echo "Backend service not implemented yet"
+    profiles:
+      - dev
+      - production
+
+networks:
+  default:
+    name: pixi-network
